@@ -1,0 +1,53 @@
+CODE
+Exception
+la View ne crée pas d'objet Model (ElementDatabase)
+Séparateur #
+proxy partout
+thread parallele blind
+
+FEATURE
+parametre proxy
+vider écran si nouvelle url
+Bouton vider écran
+chargement des colonnes
+Windows L&F
+Statusbar
+Resize tableau au contenu: scroll horizontal
+mode debug
+mode text wrap
+stop task
+recherche d'index 10 par 10
+blind test non bloquant
+
+BUG
+status pas fixe
+supprimer tab après lancement d'un recherche
+recherche possible même si 0 lignes ou nb inconnu
+{
+	oscommerce.configuration>last_modified
+	valeur NULL
+	Exception in thread "Thread-7" java.lang.ArrayIndexOutOfBoundsException: 3
+		at sqli.model.InjectionModel.listValues(InjectionModel.java:347)
+}
+java.lang.IndexOutOfBoundsException (longueur ligne > 512)
+wsnguest wsnguest_settings(43) content + id
+
+
+MENUBAR
+Fermer
+Vider écran
+Preferences
+L&F
+Mode debug
+
+Menu contextuel
+copier chemin de node
+copier nom de la base
+copier nom de la table
+copier nom de la column
+lancer la recherche
+tous sélectionner
+
+Fait
+Ctrl+W pour fermer onglet
+Ctrl+Tab partout
