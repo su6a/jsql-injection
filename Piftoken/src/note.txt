@@ -1,3 +1,0 @@
-Cas particuliers
-valeurs NULL oblige ifnull sur chaque champ
-1ère valeur énorme
