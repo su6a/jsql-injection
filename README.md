@@ -1,7 +1,8 @@
 jSQL Injection
 ==============
 
-[https://sites.google.com/site/jsqlinjection/_/rsrc/1350152856008/home/images/screenshot.png https://sites.google.com/site/jsqlinjection/_/rsrc/1350153104325/home/images/screenshot_mini.png]
+Screenshot
+https://sites.google.com/site/jsqlinjection/_/rsrc/1350152856008/home/images/screenshot.png
 
 An easy to use SQL injection tool for retrieving database informations from a distant server. 
 
@@ -22,7 +23,7 @@ Running injection requires the distant server url and the name of the parameter 
 If you know an injection should work but the jSQL tool doesn't access the database, you can inform me by email or use the discussion group.
 
 For a local test, you can save the following PHP code in a script named for example simulate_get.php, and use the URL http://127.0.0.1/simulate_get.php?lib= in the first field of the tool, then click Connect to access the database:
-{{{
+```php
 <?php
     mysql_connect("localhost", "root", "");
     mysql_select_db("my_own_database");
@@ -35,4 +36,4 @@ For a local test, you can save the following PHP code in a script named for exam
     while ($row = mysql_fetch_array($result, MYSQL_NUM))
         echo join(',',$row); # normal
 ?>
-}}}
+```
