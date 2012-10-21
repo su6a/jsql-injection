@@ -1,12 +1,11 @@
 jSQL Injection
 ==============
 
-Screenshot
-https://sites.google.com/site/jsqlinjection/_/rsrc/1350152856008/home/images/screenshot.png
+[Screenshot](https://sites.google.com/site/jsqlinjection/_/rsrc/1350152856008/home/images/screenshot.png)
 
 An easy to use SQL injection tool for retrieving database informations from a distant server. 
 
-You can discuss about jSQL Injection on the [https://groups.google.com/d/forum/jsql-injection discussion group].
+You can discuss about jSQL Injection on the [discussion group](https://groups.google.com/d/forum/jsql-injection).
 
 jSQL Injection features:
   * GET, POST, header, cookie methods
