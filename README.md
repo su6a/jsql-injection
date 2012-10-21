@@ -1,20 +1,38 @@
-jSQL-Injection
+jSQL Injection
 ==============
 
-jSQL Injection is a Java GUI for database injection.
+[https://sites.google.com/site/jsqlinjection/_/rsrc/1350152856008/home/images/screenshot.png https://sites.google.com/site/jsqlinjection/_/rsrc/1350153104325/home/images/screenshot_mini.png]
 
-An easy to use SQL injection tool for retrieving database informations from a distant server.
+An easy to use SQL injection tool for retrieving database informations from a distant server. 
+
+You can discuss about jSQL Injection on the [https://groups.google.com/d/forum/jsql-injection discussion group].
 
 jSQL Injection features:
-
-    GET, POST, header, cookie methods
-    visual, errorbase, blind algorithms
-    automatic best algorithms detection
-    data retrieving progression
-    proxy setting 
+  * GET, POST, header, cookie methods
+  * normal, error based, blind, time based algorithms
+  * automatic best algorithms detection
+  * data retrieving progression
+  * proxy setting
+  * evasion
 
 For now supports MySQL.
 
-Running injection requires the distant server url and the name of parameter to inject.
+Running injection requires the distant server url and the name of the parameter to inject.
 
-Discuss about jSQL Injection on google group https://groups.google.com/d/forum/jsql-injection
+If you know an injection should work but the jSQL tool doesn't access the database, you can inform me by email or use the discussion group.
+
+For a local test, you can save the following PHP code in a script named for example simulate_get.php, and use the URL http://127.0.0.1/simulate_get.php?lib= in the first field of the tool, then click Connect to access the database:
+{{{
+<?php
+    mysql_connect("localhost", "root", "");
+    mysql_select_db("my_own_database");
+
+    $result = mysql_query("SELECT * FROM my_own_table where my_own_field = {$_GET['lib']}") # time based
+    or die( mysql_error() ); # error based
+
+    if(mysql_num_rows($result)!==0) echo" true "; # blind
+
+    while ($row = mysql_fetch_array($result, MYSQL_NUM))
+        echo join(',',$row); # normal
+?>
+}}}
